@@ -12,7 +12,7 @@ export default defineGkdApp({
         {
           key: 1,
           fastQuery: true,
-          matches: '[vid="cdp_view"]TextView[text^="跳过"]',
+          matches: '[vid="cdp_view"][text^="跳过"]',
         },
       ],
     },

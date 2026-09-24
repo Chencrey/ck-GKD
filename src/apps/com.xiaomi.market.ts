@@ -12,7 +12,7 @@ export default defineGkdApp({
         {
           key: 1,
           activityIds: '.business_ui.main.MarketTabActivity',
-          matches: '[vid="iv_close"]ImageView[desc="关闭"]',
+          matches: '[vid="iv_close"][desc="关闭"]',
         },
       ],
     },

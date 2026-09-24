@@ -13,7 +13,7 @@ export default defineGkdApp({
           key: 1,
           fastQuery: true,
           activityIds: '.ui.other.activity.SplashActivity',
-          matches: '[vid="tvTg"]TextView[text*="跳过"]',
+          matches: '[vid="tvTg"][text*="跳过"]',
         },
       ],
     },

@@ -11,7 +11,7 @@ export default defineGkdApp({
       rules: [
         {
           key: 1,
-          matches: '[vid="video_time_skip"]TextView[text*="跳过"]',
+          matches: '[vid="video_time_skip"][text*="跳过"]',
         },
       ],
     },
