@@ -1,8 +1,8 @@
 import { defineGkdApp } from '@gkd-kit/define';
 
 export default defineGkdApp({
-  id: 'com.taobao.trip',
-  name: '飞猪旅行',
+  id: 'com.mi.health',
+  name: '小米运动健康',
   groups: [
     {
       key: 1,
@@ -12,9 +12,8 @@ export default defineGkdApp({
         {
           key: 1,
           fastQuery: true,
-          activityIds:
-            '.splash.ui.VideoSplashActivity|.splash.ui.ImageSplashActivity',
-          matches: '[vid="splash_skip_hint_tv"][text*="跳过"]',
+          activityIds: 'com.xiaomi.fitness.main.MainActivity',
+          matches: '[vid="dialog_close"]',
         },
       ],
     },

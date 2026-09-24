@@ -13,7 +13,7 @@ export default defineGkdApp({
           key: 1,
           fastQuery: true,
           activityIds: '.splash.SplashActivity',
-          matches: '[text^="跳过"]',
+          matches: '[text*="跳过"]',
         },
       ],
     },

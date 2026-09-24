@@ -17,7 +17,7 @@ export default defineGkdApp({
           key: 1,
           fastQuery: true,
           activityIds: 'tv.danmaku.bili.MainActivityV2',
-          matches: '[vid="count_down"][text^="跳过"]',
+          matches: '[vid="count_down"][text*="跳过"]',
         },
       ],
     },
