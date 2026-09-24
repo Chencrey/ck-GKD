@@ -32,13 +32,17 @@ jobs:
         run: |
           git config --local user.email github-actions[bot]@users.noreply.github.com
           git config --local user.name github-actions[bot]
-          git status
-          git add .
-          git commit -a -m "chore: v${{steps.version.outputs.version}}"
-        continue-on-error: true
+          git add -A
+          if git diff --cached --quiet; then
+            echo "committed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes to commit"
+          else
+            git commit -m "chore: v${{ steps.version.outputs.version }}"
+            echo "committed=true" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Git push
-        if: ${{ steps.commit.outcome == 'success' }}
+        if: steps.commit.outputs.committed == 'true'
         uses: ad-m/github-push-action@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -46,7 +50,7 @@ jobs:
           tags: true
 
       - name: Create Release
-        if: ${{ steps.commit.outcome == 'success' }}
+        if: steps.commit.outputs.committed == 'true'
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
