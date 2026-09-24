@@ -12,7 +12,8 @@ export default defineGkdApp({
         {
           key: 1,
           fastQuery: true,
-          activityIds: '.splash.ui.VideoSplashActivity',
+          activityIds:
+            '.splash.ui.VideoSplashActivity|.splash.ui.ImageSplashActivity',
           matches: '[vid="splash_skip_hint_tv"][text^="跳过"]',
         },
       ],

@@ -11,6 +11,7 @@ export default defineGkdApp({
       rules: [
         {
           key: 1,
+          fastQuery: true,
           matches: '[vid="video_time_skip"][text*="跳过"]',
         },
       ],
