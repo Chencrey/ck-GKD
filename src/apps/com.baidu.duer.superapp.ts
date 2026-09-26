@@ -43,5 +43,25 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 4,
+      name: '关闭看视频领会员',
+      desc: '关闭看视频领会员',
+      rules: [
+        {
+          key: 1,
+          fastQuery: true,
+          activityIds: '.MainActivity',
+          matches: '[vid="ll_three_close"]',
+        },
+        {
+          key: 2,
+          preKeys: [1],
+          fastQuery: true,
+          activityIds: '.MainActivity',
+          matches: '[vid="membership_card_close"]',
+        },
+      ],
+    },
   ],
 });

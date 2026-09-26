@@ -16,5 +16,18 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 1,
+      name: '关闭右侧屏幕广告',
+      desc: '关闭右侧屏幕广告',
+      rules: [
+        {
+          key: 1,
+          fastQuery: true,
+          activityIds: '.ui.activity.MainActivity',
+          matches: '[vid="close_img"]',
+        },
+      ],
+    },
   ],
 });

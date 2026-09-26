@@ -8,10 +8,6 @@ export default defineGkdApp({
       key: 1,
       name: '开屏广告',
       desc: '自动点击开屏广告的跳过按钮',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
       rules: [
         {
           key: 1,
@@ -29,27 +25,25 @@ export default defineGkdApp({
       rules: [
         {
           key: 1,
-          matches: 'TextView[text="后将展示广告"] + @TextView[text="取消"]',
+          fastQuery: true,
+          activityIds:
+            'com.bilibili.ship.theseus.detail.UnitedBizDetailsActivity',
+          matches: '[vid="video_area"] [text*="取消"]',
+        },
+        {
+          key: 2,
+          preKeys: [1],
+          fastQuery: true,
+          activityIds:
+            'com.bilibili.ship.theseus.detail.UnitedBizDetailsActivity',
+          matches: '[vid="fl_tab_pager_container"] [desc="close"]',
         },
       ],
     },
     {
       key: 3,
-      name: '视频详情页-UP主推荐广告关闭',
-      desc: '自动关闭视频详情页中的UP主推荐广告',
-      activityIds: 'com.bilibili.ship.theseus.detail.UnitedBizDetailsActivity',
-      rules: [
-        {
-          key: 1,
-          matches: 'View[desc="close"]',
-        },
-      ],
-    },
-    {
-      key: 4,
       name: 'Story视频-取消自动进入直播间',
       desc: 'Story短视频中出现"自动进入直播间"倒计时时，自动点击取消按钮',
-      fastQuery: true,
       rules: [
         {
           key: 1,
@@ -60,13 +54,13 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 5,
+      key: 4,
       name: 'Story视频-跳过创作推广、广告',
       desc: 'Story短视频刷到"创作推广"、"广告"内容时，自动向上滑动切换到下一个视频',
-      actionMaximum: 1,
       rules: [
         {
           key: 1,
+          fastQuery: true,
           activityIds: 'com.bilibili.video.story.StoryVideoActivity',
           matches:
             '[vid="story_title"][text*="创作推广" || text*="广告"][visibleToUser=true]',

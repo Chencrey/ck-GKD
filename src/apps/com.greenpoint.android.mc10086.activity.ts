@@ -28,8 +28,20 @@ export default defineGkdApp({
         {
           key: 2,
           preKeys: [1],
+          fastQuery: true,
           matchDelay: 300,
           matches: '[vid="close_btn"]',
+        },
+      ],
+    },
+    {
+      key: 3,
+      name: '关闭“我的”页面屏幕右侧广告',
+      desc: '关闭“我的”页面屏幕右侧广告',
+      rules: [
+        {
+          fastQuery: true,
+          matches: '[vid="close_btn_bottom"]',
         },
       ],
     },

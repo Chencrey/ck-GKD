@@ -17,5 +17,18 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 2,
+      name: '关闭“我的”页面弹窗广告',
+      desc: '关闭“我的”页面弹窗广告',
+      rules: [
+        {
+          key: 1,
+          fastQuery: true,
+          activityIds: '.TongchengMainActivity',
+          matches: '[vid="second_close"]',
+        },
+      ],
+    },
   ],
 });

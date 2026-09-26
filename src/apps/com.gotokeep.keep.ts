@@ -19,6 +19,19 @@ export default defineGkdApp({
     },
     {
       key: 2,
+      name: '日程不需要推荐',
+      desc: '日程不需要推荐',
+      rules: [
+        {
+          key: 1,
+          fastQuery: true,
+          activityIds: '.refactor.business.main.activity.MainActivity',
+          matches: '[text="暂不需要"]',
+        },
+      ],
+    },
+    {
+      key: 3,
       name: '关闭推荐',
       desc: '关闭推荐',
       rules: [
@@ -27,6 +40,12 @@ export default defineGkdApp({
           fastQuery: true,
           activityIds: '.refactor.business.main.activity.MainActivity',
           matches: '[vid="imgClose"]',
+        },
+        {
+          key: 2,
+          fastQuery: true,
+          activityIds: '.refactor.business.main.activity.MainActivity',
+          matches: '[vid="closeImageView"]',
         },
       ],
     },

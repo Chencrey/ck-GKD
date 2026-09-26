@@ -6,8 +6,8 @@ export default defineGkdApp({
   groups: [
     {
       key: 1,
-      name: '开屏广告',
-      desc: '跳过开屏广告',
+      name: '首页广告',
+      desc: '关闭首页广告',
       rules: [
         {
           key: 1,
