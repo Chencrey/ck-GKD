@@ -17,7 +17,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 1,
+      key: 2,
       name: '关闭右侧屏幕广告',
       desc: '关闭右侧屏幕广告',
       rules: [
