@@ -26,7 +26,7 @@ export default defineGkdApp({
           key: 1,
           fastQuery: true,
           activityIds: '.plugin.gallery.ui.AlbumPreviewUI',
-          matches: '[vid="km5"]',
+          matches: '[vid="km5"][desc*="未选中"]',
         },
       ],
     },
