@@ -43,7 +43,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 3,
+      key: 4,
       name: '微信自动点查看原视频',
       desc: '微信自动点查看原视频',
       rules: [
