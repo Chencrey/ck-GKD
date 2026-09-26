@@ -28,7 +28,7 @@ export default defineGkdApp({
           matches: '[text^="跳过"]',
         },
         {
-          key: 3,
+          key: 4,
           fastQuery: true,
           activityIds: '.advertise.ui.SplashAdActivity',
           matches: '[vid="tv_skip"][text^="跳过"]',
