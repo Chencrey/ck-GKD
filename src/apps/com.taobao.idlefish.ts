@@ -17,7 +17,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 1,
+      key: 2,
       name: '关闭系统通知弹窗',
       desc: '关闭系统通知弹窗',
       rules: [
