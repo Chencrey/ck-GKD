@@ -13,7 +13,7 @@ export default defineGkdApp({
           key: 1,
           activityIds:
             'com.dragon.read.component.shortvideo.impl.ShortSeriesActivity',
-          matches: 'ImageView[width=44][height=44][depth=26]',
+          matches: 'ImageView[vid!="ewx"][width=44][height=44][depth=26]',
         },
         {
           key: 2,
