@@ -43,6 +43,7 @@ export default defineGkdApp({
         },
         {
           key: 3,
+          fastQuery: false,
           activityIds: 'com.ikecin.app.activity.AppHomeActivity',
           matches: '[vid="layout_ad"] Image[width<40][height<40]',
         },
@@ -58,6 +59,13 @@ export default defineGkdApp({
           fastQuery: true,
           activityIds: 'com.ikecin.app.activity.AppHomeActivity',
           matches: '[vid="ptgImgClose"]',
+        },
+        {
+          key: 6,
+          fastQuery: true,
+          activityIds:
+            'com.smartdigimkt.sdk.basead.ui.ATPortraitTranslucentActivity',
+          matches: '[vid="layout_ad"] [text*="投诉"]',
         },
       ],
     },

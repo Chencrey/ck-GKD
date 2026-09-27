@@ -12,7 +12,7 @@ export default defineGkdApp({
       rules: [
         {
           key: 1,
-          fastQuery: true,
+          fastQuery: false,
           activityIds: 'com.dragon.read.pages.main.MainFragmentActivity',
           matches: '[vid="apt"][text="上滑继续观看短剧"][visibleToUser=true]',
           action: 'swipe',
