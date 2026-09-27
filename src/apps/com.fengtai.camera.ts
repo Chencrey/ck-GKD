@@ -67,22 +67,36 @@ export default defineGkdApp({
       desc: '关闭屏幕右侧小广告',
       rules: [
         {
+          key: 1,
           fastQuery: true,
           activityIds: 'com.ikecin.app.activity.AppHomeActivity',
           matches: '[vid="image_close_reward_animation"]',
         },
       ],
     },
-
     {
       key: 4,
       name: '关闭推荐',
       desc: '关闭推荐',
       rules: [
         {
+          key: 1,
           fastQuery: true,
           activityIds: 'com.ikecin.app.activity.AppHomeActivity',
           matches: '[vid="parentPanel"] [text="暂不开启"]',
+        },
+      ],
+    },
+    {
+      key: 5,
+      name: '关闭摄像头页面推广',
+      desc: '关闭摄像头页面推广',
+      rules: [
+        {
+          key: 1,
+          fastQuery: true,
+          activityIds: 'com.ikecin.app.activity.AppHomeActivity',
+          matches: '[vid="button_close"]',
         },
       ],
     },
