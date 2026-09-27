@@ -6,6 +6,27 @@ export default defineGkdApp({
   groups: [
     {
       key: 1,
+      name: '自动关闭广告',
+      desc: '自动关闭广告',
+      rules: [
+        {
+          key: 1,
+          activityIds:
+            'com.dragon.read.component.shortvideo.impl.ShortSeriesActivity',
+          matches: 'ImageView[width=44][height=44][depth=26]',
+        },
+        {
+          key: 2,
+          preKeys: [1],
+          fastQuery: true,
+          activityIds:
+            'com.dragon.read.component.shortvideo.impl.ShortSeriesActivity',
+          matches: '[vid="c66"] [text*="关闭"]',
+        },
+      ],
+    },
+    {
+      key: 2,
       name: '广告自动上滑',
       desc: '刷短剧遇到广告时自动向上滑动切换到下一个视频',
       rules: [
