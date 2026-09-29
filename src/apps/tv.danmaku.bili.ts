@@ -126,6 +126,13 @@ export default defineGkdApp({
           activityIds: 'com.bilibili.video.story.StoryVideoActivity',
           matches:
             '[vid="fans"][text*="点击观看更多精彩正片"][visibleToUser=true]',
+          action: 'swipe',
+          swipeArg: {
+            start: { x: 'screenWidth/2', y: 'screenHeight*0.5' },
+            end: { x: 'screenWidth/2', y: 'screenHeight*0.3' },
+            duration: 400,
+          },
+          actionCd: 3000,
         },
       ],
     },
