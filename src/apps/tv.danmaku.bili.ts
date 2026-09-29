@@ -74,5 +74,60 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 5,
+      name: '自动跳过推广小说、短剧',
+      desc: '自动跳过推广小说、短剧',
+      rules: [
+        {
+          key: 1,
+          fastQuery: true,
+          activityIds: 'com.bilibili.video.story.StoryVideoActivity',
+          matches:
+            '[vid="charge_widget_end_button"][text*="继续观看" || text*="免费阅读"][visibleToUser=true]',
+          action: 'swipe',
+          swipeArg: {
+            start: { x: 'screenWidth/2', y: 'screenHeight*0.5' },
+            end: { x: 'screenWidth/2', y: 'screenHeight*0.3' },
+            duration: 400,
+          },
+          actionCd: 3000,
+        },
+      ],
+    },
+    {
+      key: 6,
+      name: '自动跳过充电短剧',
+      desc: '自动跳过充电短剧',
+      rules: [
+        {
+          key: 1,
+          fastQuery: true,
+          activityIds: 'com.bilibili.video.story.StoryVideoActivity',
+          matches: '[vid="story_seed_bar"] [text*="漫剧"|| text*="充电"]',
+          action: 'swipe',
+          swipeArg: {
+            start: { x: 'screenWidth/2', y: 'screenHeight*0.5' },
+            end: { x: 'screenWidth/2', y: 'screenHeight*0.3' },
+            duration: 400,
+          },
+          actionCd: 3000,
+        },
+      ],
+    },
+    {
+      key: 7,
+      name: '自动跳过推广剧',
+      desc: '自动跳过推广剧',
+      rules: [
+        {
+          key: 1,
+          fastQuery: true,
+          activityIds: 'com.bilibili.video.story.StoryVideoActivity',
+          matches:
+            '[vid="fans"][text*="点击观看更多精彩正片"][visibleToUser=true]',
+        },
+      ],
+    },
   ],
 });
