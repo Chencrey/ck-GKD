@@ -38,7 +38,6 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds: '.ui.LauncherUI',
           matches: '[vid="ug7"]',
           actionMaximum: 1,
         },
@@ -51,7 +50,6 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds: '.ui.LauncherUI',
           matches: '[vid="ug8"]',
           actionMaximum: 1,
         },

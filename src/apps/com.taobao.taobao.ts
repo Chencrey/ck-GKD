@@ -11,8 +11,22 @@ export default defineGkdApp({
       rules: [
         {
           key: 1,
+          fastQuery: true,
           activityIds: 'com.taobao.tao.welcome.Welcome',
           matches: '[vid="poplayer_inner_view"] [desc="关闭按钮"]',
+        },
+      ],
+    },
+    {
+      key: 2,
+      name: '关闭返回应用的开屏推荐',
+      desc: '关闭返回应用的开屏推荐',
+      rules: [
+        {
+          key: 1,
+          fastQuery: true,
+          activityIds: 'com.taobao.themis.container.app.TMSActivity',
+          matches: '[vid="tv_close"]',
         },
       ],
     },

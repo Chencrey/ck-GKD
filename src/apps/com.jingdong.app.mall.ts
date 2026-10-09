@@ -17,5 +17,27 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 2,
+      name: '关闭秒送页开屏广告',
+      desc: '关闭秒送页开屏广告',
+      rules: [
+        {
+          activityIds: '.MainFrameActivity',
+          matches: 'ImageView[width=69][height=69]',
+        },
+      ],
+    },
+    {
+      key: 3,
+      name: '关闭消息页开屏广告',
+      desc: '关闭消息页开屏广告',
+      rules: [
+        {
+          activityIds: '.MainFrameActivity',
+          matches: 'Button[desc="关闭"]',
+        },
+      ],
+    },
   ],
 });
