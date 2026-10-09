@@ -106,7 +106,6 @@ export default defineGkdApp({
           activityIds: 'com.bilibili.video.story.StoryVideoActivity',
           matches: [
             '[vid="story_seed_bar"] [text*="漫剧"|| text*="充电"][visibleToUser=true]',
-            '[vid="story_ctrl_danmaku_send"][text*="充电后解锁"][visibleToUser=true]',
           ],
           action: 'swipe',
           swipeArg: {

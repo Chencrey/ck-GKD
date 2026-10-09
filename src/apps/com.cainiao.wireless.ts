@@ -21,6 +21,12 @@ export default defineGkdApp({
           activityIds: '.homepage.view.activity.AdsActivity',
           matches: '[vid="third_splash_bottom_layout"] [text*="跳过"]',
         },
+        {
+          key: 3,
+          fastQuery: true,
+          activityIds: '.homepage.view.activity.AdsActivity',
+          matches: '[vid="ms_skipView"]',
+        },
       ],
     },
     {
